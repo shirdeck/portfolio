@@ -1,13 +1,16 @@
 import "./App.css";
 import SnakeGame from "./components/SnakeGame/SnakeGame";
 import Ticker from "./components/Ticker/Ticker";
-import ContactUs from './components/Contact/ContactUs'
+import ContactUs from './components/Contact/ContactUs';
+import WebIcon from "./web-icon.png";
+import Memoji from "./memoji.png";
+
 
 function App() {
   return (
     <div className="grid-container">
       <div className="logo">
-        <img src="./web-icon.png" alt="web-icon" />
+        <img src={WebIcon} alt="web-icon" />
       </div>
       <div className="title">
         <span>shir decker : web developer</span>
@@ -22,7 +25,7 @@ function App() {
         <SnakeGame />
       </div>
       <div className="memoji">
-        <img src="./memoji.png" alt="memoji" />
+        <img src={Memoji} alt="memoji" />
       </div>
       <div className="projects">SOON</div>
       <div className="jff">SOON</div>
