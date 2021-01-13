@@ -1,38 +1,405 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: "Montserrat", sans-serif; }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+body {
+  line-height: 1;
+  height: 100%;
+  background-color: black; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  min-width: 700px;
+  min-height: 550px;
+  grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 3fr;
+  gap: 0px 0px;
+  grid-template-areas: "Logo Logo Title Title Title" "Logo Logo About-Title Projects-Title JFF-Title" "Black-Column Snake Memoji Projects JFF" "Black-Column Contact Contact Contact Links"; }
+
+::selection {
+  background: #fbff00; }
+
+#snakeGame:focus {
+  outline: none;
+  border: none; }
+
+.logo {
+  grid-area: Logo;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  border: 5px solid black;
+  border-right: 0;
+  border-bottom: 0;
+  background-color: white; }
+  .logo img {
+    width: 28%;
+    min-width: 100px; }
 
-.App-link {
-  color: #61dafb;
-}
+.title {
+  grid-area: Title;
+  border: 5px solid black;
+  border-bottom: 0;
+  font-size: 43px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.about-title {
+  grid-area: About-Title;
+  border: 5px solid black;
+  border-right: 0;
+  border-bottom: 0;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; }
+
+.projects-title {
+  grid-area: Projects-Title;
+  border: 5px solid black;
+  border-right: 0;
+  border-bottom: 0;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; }
+
+.jff-title {
+  grid-area: JFF-Title;
+  border: 5px solid black;
+  border-bottom: 0;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; }
+
+.ticker {
+  grid-area: Black-Column;
+  overflow: hidden;
+  position: relative;
+  font-size: 34px;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 15%; }
+
+.snake {
+  grid-area: Snake;
+  position: relative;
+  border: 5px solid black;
+  border-right: 0;
+  border-bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white; }
+  .snake .demo {
+    width: 100px;
+    margin: 50px 0; }
+  .snake .gameover {
+    position: absolute;
+    top: 30%;
+    left: 47%;
+    transform: translate(-50%); }
+    .snake .gameover span {
+      height: 200px;
+      font-size: 36px;
+      position: absolute;
+      width: 20px;
+      left: 0;
+      top: 0;
+      transform-origin: bottom center;
+      -webkit-text-stroke: 1px white;
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+    .snake .gameover .char1 {
+      transform: rotate(-33deg); }
+    .snake .gameover .char2 {
+      transform: rotate(-26deg); }
+    .snake .gameover .char3 {
+      transform: rotate(-18deg); }
+    .snake .gameover .char4 {
+      transform: rotate(-4deg); }
+    .snake .gameover .char5 {
+      transform: rotate(-4deg); }
+    .snake .gameover .char6 {
+      transform: rotate(5deg); }
+    .snake .gameover .char7 {
+      transform: rotate(14deg); }
+    .snake .gameover .char8 {
+      transform: rotate(23deg); }
+    .snake .gameover .char9 {
+      transform: rotate(27deg); }
+    .snake .gameover .char10 {
+      transform: rotate(37deg); }
+  .snake .button {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin: 10px 0;
+    font-size: 26px;
+    text-transform: uppercase;
+    width: 70px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer; }
+  .snake li {
+    list-style-type: none;
+    line-height: 0; }
+
+.memoji {
+  grid-area: Memoji;
+  border: 5px solid black;
+  border-right: 0;
+  border-bottom: 0;
+  background-color: #c7c2cb;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .memoji:hover {
+    background-color: #ff8100; }
+  .memoji img {
+    width: 80%;
+    animation-play-state: paused;
+    cursor: pointer; }
+    .memoji img:hover {
+      transform: translateX(10px) rotate(10deg) translateY(5px); }
+
+.projects {
+  grid-area: Projects;
+  border: 5px solid black;
+  border-right: 0;
+  border-bottom: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; }
+
+.jff {
+  grid-area: JFF;
+  border: 5px solid black;
+  border-bottom: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; }
+
+.contact {
+  grid-area: Contact;
+  border: 5px solid black;
+  border-right: 0;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  background-color: white; }
+  .contact form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .contact form:hover {
+      background-color: #00FE00; }
+  .contact p {
+    font-size: 150px;
+    text-transform: uppercase;
+    text-align: center; }
+  .contact input {
+    font-size: 24px;
+    background-color: #d9d9d9;
+    border: none;
+    color: black;
+    font-family: "Montserrat", sans-serif; }
+    .contact input::placeholder {
+      color: gray; }
+  .contact .head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .contact .head input {
+      width: 100%;
+      border: 5px solid black;
+      border-left: 0; }
+      .contact .head input:focus {
+        outline: none; }
+      .contact .head input:nth-last-of-type(1) {
+        border-right: 0; }
+  .contact .body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .contact .body textarea {
+      background-color: #d9d9d9;
+      border: 5px solid black;
+      border-top: 0;
+      border-left: 0;
+      border-bottom: 0;
+      width: 80%;
+      font-size: 24px;
+      font-family: "Montserrat", sans-serif;
+      resize: none; }
+      .contact .body textarea:focus {
+        outline: none; }
+      .contact .body textarea::placeholder {
+        font-size: 24px;
+        font-family: "Montserrat", sans-serif; }
+    .contact .body input {
+      border: 5px solid black;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      width: 20%;
+      background-color: black;
+      color: white;
+      cursor: pointer; }
+      .contact .body input:focus {
+        outline: none; }
+      .contact .body input:active {
+        background-color: #00FE00; }
+
+.links {
+  grid-area: Links;
+  border: 5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; }
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+    visibility: visible; }
+  100% {
+    transform: translate3d(0, 320%, 0); } }
+
+/*# sourceMappingURL=App.css.map */
