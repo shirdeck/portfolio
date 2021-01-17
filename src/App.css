@@ -208,7 +208,10 @@ table {
   text-transform: uppercase;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   padding-left: 15%; }
+  .ticker .c-rainbow {
+    margin-top: -15%; }
 
 .snake {
   grid-area: Snake;
@@ -401,5 +404,9 @@ table {
     text-align: center; }
   .links img {
     width: 100%; }
+
+@media only screen and (max-width: 1440px) {
+  .ticker .c-rainbow {
+    margin-top: -20%; } }
 
 /*# sourceMappingURL=App.css.map */

@@ -247,7 +247,11 @@ $border: 5px solid black;
   text-transform: uppercase;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   padding-left: 15%;
+  .c-rainbow {
+    margin-top: -15%;
+  }
 }
 
 .snake {
@@ -474,6 +478,12 @@ $border: 5px solid black;
     img {
       width: 100%;
     }
+}
+
+@media only screen and (max-width: 1440px) {
+  .ticker .c-rainbow {
+    margin-top: -20%;
+  }
 }
 
 // @keyframes ticker {
