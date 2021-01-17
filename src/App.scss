@@ -396,6 +396,8 @@ $border: 5px solid black;
     font-size: 150px;
     text-transform: uppercase;
     text-align: center;
+    margin: 0;
+    justify-self: flex-end;
   }
   input {
     font-size: 24px;
@@ -451,12 +453,14 @@ $border: 5px solid black;
       width: 20%;
       background-color: black;
       color: white;
+      border-bottom: none;
       cursor: pointer;
       &:focus {
         outline: none;
       }
       &:active {
       background-color: #fbff00;
+      color: black;
       }
     }
   }
@@ -486,12 +490,3 @@ $border: 5px solid black;
   }
 }
 
-// @keyframes ticker {
-//   0% {
-//     transform: translate3d(0, 0, 0);
-//     visibility: visible;
-//   }
-//   100% {
-//     transform: translate3d(0, 20%, 0);
-//   }
-// }

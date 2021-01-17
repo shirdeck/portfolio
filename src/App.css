@@ -336,7 +336,9 @@ table {
   .contact p {
     font-size: 150px;
     text-transform: uppercase;
-    text-align: center; }
+    text-align: center;
+    margin: 0;
+    justify-self: flex-end; }
   .contact input {
     font-size: 24px;
     background-color: #d9d9d9;
@@ -384,11 +386,13 @@ table {
       width: 20%;
       background-color: black;
       color: white;
+      border-bottom: none;
       cursor: pointer; }
       .contact .body input:focus {
         outline: none; }
       .contact .body input:active {
-        background-color: #fbff00; }
+        background-color: #fbff00;
+        color: black; }
 
 .links {
   grid-area: Links;
