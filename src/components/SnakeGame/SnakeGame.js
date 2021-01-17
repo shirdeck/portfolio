@@ -88,7 +88,7 @@ const SnakeGame = () => {
   }, [snake, apple, gameOver]);
 
   return (
-    <div role="button" style={{ outline: "none", border: "none"  }} tabIndex="0" onKeyDown={(e) => moveSnake(e)}>
+    <div role="button" style={{ outline: "none", border: "none" }} tabIndex="0" onKeyDown={(e) => moveSnake(e)}>
       <canvas
         style={{ outline: "none", border: "none"  }}
         id="snakeGame"
@@ -98,20 +98,20 @@ const SnakeGame = () => {
       />
       {/* {gameOver && <div className="gameover">TRY AGAIN!</div>} */}
       {gameOver && <div className="gameover">
-        <span class="char1">T</span>
-        <span class="char2">R</span>
-        <span class="char3">Y</span>
-        <span class="char4"> </span>
-        <span class="char5">A</span>
-        <span class="char6">G</span>
-        <span class="char7">A</span>
-        <span class="char8">I</span>
-        <span class="char9">N</span>
-        <span class="char10">!</span>
+        <span className="char1">T</span>
+        <span className="char2">R</span>
+        <span className="char3">Y</span>
+        <span className="char4"> </span>
+        <span className="char5">A</span>
+        <span className="char6">G</span>
+        <span className="char7">A</span>
+        <span className="char8">I</span>
+        <span className="char9">N</span>
+        <span className="char10">!</span>
         </div>}
 
       {startButton && (
-        <div class="button" classname="button" onClick={startGame}>
+        <div className="button" className="button" onClick={startGame}>
           play
         </div>
       )}

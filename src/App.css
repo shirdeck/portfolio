@@ -219,6 +219,8 @@ table {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  max-width: 332px;
+  max-height: 282px;
   background-color: white; }
   .snake .demo {
     width: 100px;
@@ -329,7 +331,7 @@ table {
     flex-direction: column;
     justify-content: space-between; }
     .contact form:hover {
-      background-color: #00FE00; }
+      background-color: #fbff00; }
   .contact p {
     font-size: 150px;
     text-transform: uppercase;
@@ -385,7 +387,7 @@ table {
       .contact .body input:focus {
         outline: none; }
       .contact .body input:active {
-        background-color: #00FE00; }
+        background-color: #fbff00; }
 
 .links {
   grid-area: Links;
@@ -394,12 +396,5 @@ table {
   justify-content: center;
   align-items: center;
   background-color: white; }
-
-@keyframes ticker {
-  0% {
-    transform: translate3d(0, 0, 0);
-    visibility: visible; }
-  100% {
-    transform: translate3d(0, 320%, 0); } }
 
 /*# sourceMappingURL=App.css.map */
