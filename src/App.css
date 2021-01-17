@@ -219,8 +219,6 @@ table {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 332px;
-  max-height: 282px;
   background-color: white; }
   .snake .demo {
     width: 100px;
