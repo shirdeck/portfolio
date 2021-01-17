@@ -2,9 +2,9 @@ import "./App.css";
 import SnakeGame from "./components/SnakeGame/SnakeGame";
 import Ticker from "./components/Ticker/Ticker";
 import ContactUs from './components/Contact/ContactUs';
-import Eyes from './components/Eyes/Eyes';
-import WebIcon from "./web-icon.png";
-import Memoji from "./memoji.png";
+import Links from './components/Links/Links'
+import WebIcon from "./images/web-icon.png";
+import Memoji from "./images/memoji.png";
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
       <div className="projects">SOON</div>
       <div className="jff">SOON</div>
       <div className="contact"><ContactUs/></div>
-      <div className="links">Soon</div>
+      <div className="links"><Links/></div>
     </div>
   );
 }

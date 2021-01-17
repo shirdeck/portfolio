@@ -463,8 +463,19 @@ $border: 5px solid black;
 .links {
   grid-area: Links;
   border: $border;
-  @include center;
   @include bg-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    a {
+      display: block; 
+      width: 40%;
+      text-align: center;
+    }
+    img {
+      width: 100%;
+    }
 }
 
 // @keyframes ticker {

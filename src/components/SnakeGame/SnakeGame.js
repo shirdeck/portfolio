@@ -111,7 +111,7 @@ const SnakeGame = () => {
         </div>}
 
       {startButton && (
-        <div className="button" className="button" onClick={startGame}>
+        <div className="button" onClick={startGame}>
           play
         </div>
       )}
