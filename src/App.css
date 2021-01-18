@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@600&display=swap");
 html,
 body,
 div,
@@ -84,8 +85,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  vertical-align: baseline;
-  font-family: "Montserrat", sans-serif; }
+  vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -104,7 +104,8 @@ section {
 body {
   line-height: 1;
   height: 100%;
-  background-color: black; }
+  background-color: black;
+  font-family: "Montserrat", sans-serif; }
 
 ol,
 ul {
@@ -127,6 +128,7 @@ table {
 
 .grid-container {
   display: grid;
+  position: relative;
   height: 100vh;
   min-width: 700px;
   min-height: 550px;
@@ -173,10 +175,20 @@ table {
   border-right: 0;
   border-bottom: 0;
   font-size: 24px;
+  height: 100%;
+  cursor: pointer;
+  background-image: linear-gradient(#ff8100, #ff8100);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s, color .5s;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white; }
+  .about-title:hover {
+    background-size: 100% 100%;
+    color: black; }
 
 .projects-title {
   grid-area: Projects-Title;
@@ -292,8 +304,7 @@ table {
     background-color: #ff8100; }
   .memoji img {
     width: 80%;
-    animation-play-state: paused;
-    cursor: pointer; }
+    animation-play-state: paused; }
     .memoji img:hover {
       transform: translateX(10px) rotate(10deg) translateY(5px); }
 
@@ -360,6 +371,7 @@ table {
       .contact .head input:nth-last-of-type(1) {
         border-right: 0; }
   .contact .body {
+    min-height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
@@ -408,6 +420,9 @@ table {
     text-align: center; }
   .links img {
     width: 100%; }
+
+.shir {
+  width: 200px; }
 
 @media only screen and (max-width: 1440px) {
   .ticker .c-rainbow {
