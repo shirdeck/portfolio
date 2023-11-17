@@ -45,7 +45,7 @@ export default function AnimatedModal() {
 
     return (
         <div>
-      <div className="about-title" onClick={handleOpen}>About Me</div>
+      <div className="about-title" onClick={handleOpen}>about me</div>
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"

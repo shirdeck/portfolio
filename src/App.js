@@ -1,11 +1,19 @@
 import "./App.css";
 import SnakeGame from "./components/SnakeGame/SnakeGame";
 import Ticker from "./components/Ticker/Ticker";
+import JFF from "./components/JFF/JFF";
 import ContactUs from './components/Contact/ContactUs';
 import Links from './components/Links/Links'
 import WebIcon from "./images/web-icon.png";
 import Memoji from "./images/memoji.png";
-import Modal from "./components/Modal/Modal"
+import Modal from "./components/Modal/Modal";
+import CV from "./components/CV/CV";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
 
@@ -15,12 +23,18 @@ function App() {
         <img src={WebIcon} alt="web-icon" />
       </div>
       <div className="title">
-        <span>shir decker : web developer</span>
+        <span>Hi, i'm shir decker...</span>
       </div>
       <Modal/>
-      {/* <div className="about-title" onClick={handleOpen}>About Me</div> */}
-      <div className="projects-title">Projects</div>
-      <div className="jff-title">Just For Fun</div>
+      <CV/>
+      <Router>
+      <Link to="/jff" className="jff-title">just for fun</Link>
+      <Switch>
+        <Route path="/jff">
+          <JFF/>
+        </Route>
+      </Switch>
+      </Router>
       <div className="ticker">
         <Ticker />
       </div>

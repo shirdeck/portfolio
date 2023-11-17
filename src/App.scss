@@ -156,6 +156,19 @@ $border: 5px solid black;
   background-color: white;
 }
 
+@mixin hover-fill {
+  cursor: pointer;
+  background-image: linear-gradient(black, black);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s, color .5s;
+  &:hover {
+      background-size: 100% 100%;
+      color: white;
+  }
+}
+
 $border: 5px solid black;
 $orange: #ff8100;
 
@@ -186,21 +199,6 @@ $orange: #ff8100;
   }
 }
 
-.logo {
-  grid-area: Logo;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: $border;
-  border-right: 0;
-  border-bottom: 0;
-  @include bg-color;
-  img {
-    width: 28%;
-    min-width: 100px;
-  }
-}
-
 .title {
   grid-area: Title;
   border: $border;
@@ -219,18 +217,9 @@ $orange: #ff8100;
   border-bottom: 0;
   font-size: 24px;
   height: 100%;
-  cursor: pointer;
-  background-image: linear-gradient($orange, $orange);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  transition: background-size .5s, color .5s;
   @include center;
   @include bg-color;
-  &:hover {
-    background-size: 100% 100%;
-    color: black;
-  }
+  @include hover-fill;
 }
 
 .projects-title {
@@ -241,6 +230,7 @@ $orange: #ff8100;
   font-size: 24px;
   @include center;
   @include bg-color;
+  @include hover-fill;
 }
 
 .jff-title {
@@ -248,8 +238,11 @@ $orange: #ff8100;
   border: $border;
   border-bottom: 0;
   font-size: 24px;
+  color:inherit;
+  text-decoration: none;
   @include center;
   @include bg-color;
+  @include hover-fill;
 }
 
 .ticker {
@@ -498,6 +491,16 @@ $orange: #ff8100;
     }
 }
 
+.cv {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
 .shir {
   width: 200px;
 }
@@ -508,3 +511,50 @@ $orange: #ff8100;
   }
 }
 
+.headline {
+  display: flex;
+}
+
+.logo {
+  grid-area: Logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: $border;
+  border-right: 0;
+  border-bottom: 0;
+  @include bg-color;
+
+  img {
+    width: 28%;
+    min-width: 100px;
+    transition: transform 1s ease-in-out;
+    transform-origin: center;
+
+    // Define the default state with rollRight animation
+    animation: rollRight 1s forwards;
+  }
+
+  &:hover img {
+    // Animation when hovering
+    animation: rollLeft 1s forwards;
+  }
+}
+
+@keyframes rollLeft {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rollRight {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

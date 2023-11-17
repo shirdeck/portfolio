@@ -144,19 +144,6 @@ table {
   outline: none;
   border: none; }
 
-.logo {
-  grid-area: Logo;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 5px solid black;
-  border-right: 0;
-  border-bottom: 0;
-  background-color: white; }
-  .logo img {
-    width: 28%;
-    min-width: 100px; }
-
 .title {
   grid-area: Title;
   border: 5px solid black;
@@ -176,19 +163,19 @@ table {
   border-bottom: 0;
   font-size: 24px;
   height: 100%;
-  cursor: pointer;
-  background-image: linear-gradient(#ff8100, #ff8100);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  transition: background-size .5s, color .5s;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white; }
+  background-color: white;
+  cursor: pointer;
+  background-image: linear-gradient(black, black);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s, color .5s; }
   .about-title:hover {
     background-size: 100% 100%;
-    color: black; }
+    color: white; }
 
 .projects-title {
   grid-area: Projects-Title;
@@ -199,17 +186,37 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white; }
+  background-color: white;
+  cursor: pointer;
+  background-image: linear-gradient(black, black);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s, color .5s; }
+  .projects-title:hover {
+    background-size: 100% 100%;
+    color: white; }
 
 .jff-title {
   grid-area: JFF-Title;
   border: 5px solid black;
   border-bottom: 0;
   font-size: 24px;
+  color: inherit;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white; }
+  background-color: white;
+  cursor: pointer;
+  background-image: linear-gradient(black, black);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s, color .5s; }
+  .jff-title:hover {
+    background-size: 100% 100%;
+    color: white; }
 
 .ticker {
   grid-area: Black-Column;
@@ -421,11 +428,51 @@ table {
   .links img {
     width: 100%; }
 
+.cv {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; }
+
 .shir {
   width: 200px; }
 
 @media only screen and (max-width: 1440px) {
   .ticker .c-rainbow {
     margin-top: -20%; } }
+.headline {
+  display: flex; }
+
+.logo {
+  grid-area: Logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  border-right: 0;
+  border-bottom: 0;
+  background-color: white; }
+  .logo img {
+    width: 28%;
+    min-width: 100px;
+    transition: transform 1s ease-in-out;
+    transform-origin: center;
+    animation: rollRight 1s forwards; }
+  .logo:hover img {
+    animation: rollLeft 1s forwards; }
+
+@keyframes rollLeft {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(-360deg); } }
+@keyframes rollRight {
+  from {
+    transform: rotate(-360deg); }
+  to {
+    transform: rotate(0deg); } }
 
 /*# sourceMappingURL=App.css.map */
