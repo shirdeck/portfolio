@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.9c4dc721.chunk.css",
-    "main.js": "/portfolio/static/js/main.e40b8ca5.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.e40b8ca5.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.b5d586f4.chunk.css",
+    "main.js": "/portfolio/static/js/main.5119f71d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.5119f71d.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.a3337297.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.a3337297.js.map",
-    "static/js/2.525d4877.chunk.js": "/portfolio/static/js/2.525d4877.chunk.js",
-    "static/js/2.525d4877.chunk.js.map": "/portfolio/static/js/2.525d4877.chunk.js.map",
+    "static/js/2.4598824a.chunk.js": "/portfolio/static/js/2.4598824a.chunk.js",
+    "static/js/2.4598824a.chunk.js.map": "/portfolio/static/js/2.4598824a.chunk.js.map",
     "static/js/3.228374fa.chunk.js": "/portfolio/static/js/3.228374fa.chunk.js",
     "static/js/3.228374fa.chunk.js.map": "/portfolio/static/js/3.228374fa.chunk.js.map",
     "static/js/4.0e40a4ba.chunk.js": "/portfolio/static/js/4.0e40a4ba.chunk.js",
     "static/js/4.0e40a4ba.chunk.js.map": "/portfolio/static/js/4.0e40a4ba.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.9c4dc721.chunk.css.map": "/portfolio/static/css/main.9c4dc721.chunk.css.map",
-    "static/js/2.525d4877.chunk.js.LICENSE.txt": "/portfolio/static/js/2.525d4877.chunk.js.LICENSE.txt",
+    "static/css/main.b5d586f4.chunk.css.map": "/portfolio/static/css/main.b5d586f4.chunk.css.map",
+    "static/js/2.4598824a.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4598824a.chunk.js.LICENSE.txt",
     "static/js/3.228374fa.chunk.js.LICENSE.txt": "/portfolio/static/js/3.228374fa.chunk.js.LICENSE.txt",
     "static/media/CV-ShirDecker.e2186656.pdf": "/portfolio/static/media/CV-ShirDecker.e2186656.pdf",
     "static/media/github-orange.fcf4504e.png": "/portfolio/static/media/github-orange.fcf4504e.png",
@@ -25,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a3337297.js",
-    "static/js/2.525d4877.chunk.js",
-    "static/css/main.9c4dc721.chunk.css",
-    "static/js/main.e40b8ca5.chunk.js"
+    "static/js/2.4598824a.chunk.js",
+    "static/css/main.b5d586f4.chunk.css",
+    "static/js/main.5119f71d.chunk.js"
   ]
 }
