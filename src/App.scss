@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@600&display=swap");
 
 html,
 body,
@@ -87,6 +87,7 @@ video {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
+  font-family: "Montserrat", sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -162,10 +163,10 @@ $border: 5px solid black;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 0% 100%;
-  transition: background-size .5s, color .5s;
+  transition: background-size 0.5s, color 0.5s;
   &:hover {
-      background-size: 100% 100%;
-      color: white;
+    background-size: 100% 100%;
+    color: white;
   }
 }
 
@@ -176,7 +177,6 @@ $orange: #ff8100;
   display: grid;
   position: relative;
   height: 100vh;
-  min-width: 700px;
   min-height: 550px;
   grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 3fr 3fr;
@@ -186,6 +186,13 @@ $orange: #ff8100;
     "Logo Logo About-Title Projects-Title JFF-Title"
     "Black-Column Snake Memoji Projects JFF"
     "Black-Column Contact Contact Contact Links";
+}
+
+/* Media query for screens wider than 1260 pixels */
+@media (min-width: 1261px) {
+  .grid-container {
+    min-width: unset;
+  }
 }
 
 ::selection {
@@ -238,7 +245,7 @@ $orange: #ff8100;
   border: $border;
   border-bottom: 0;
   font-size: 24px;
-  color:inherit;
+  color: inherit;
   text-decoration: none;
   @include center;
   @include bg-color;
@@ -353,9 +360,10 @@ $orange: #ff8100;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   @include hover-active;
   img {
-    width: 80%;
+    width: 90%;
     animation-play-state: paused;
     &:hover {
       transform: translateX(10px) rotate(10deg) translateY(5px);
@@ -448,8 +456,8 @@ $orange: #ff8100;
         outline: none;
       }
       &::placeholder {
-    font-size: 24px;
-    font-family: "Montserrat", sans-serif;
+        font-size: 24px;
+        font-family: "Montserrat", sans-serif;
       }
     }
     input {
@@ -466,8 +474,12 @@ $orange: #ff8100;
         outline: none;
       }
       &:active {
-      background-color: #fbff00;
-      color: black;
+        background-color: #fbff00;
+        color: black;
+      }
+      &.email-sent {
+        background-color: green;
+        color: white;
       }
     }
   }
@@ -481,14 +493,14 @@ $orange: #ff8100;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    a {
-      display: block; 
-      width: 40%;
-      text-align: center;
-    }
-    img {
-      width: 100%;
-    }
+  a {
+    display: block;
+    width: 40%;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+  }
 }
 
 .cv {
@@ -513,6 +525,8 @@ $orange: #ff8100;
 
 .headline {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -556,5 +570,178 @@ $orange: #ff8100;
   }
   to {
     transform: rotate(0deg);
+  }
+}
+
+.mobile {
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 39%;
+  }
+
+  .title-container {
+    display: flex;
+    width: 100%;
+    .logo {
+      width: 30%;
+    }
+    .title {
+      width: 100%;
+      border-right: unset;
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .memoji {
+      border: $border;
+      border-right: unset;
+      border-left: unset;
+    }
+
+    .mobile-about-me {
+      background-color: white;
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      border: $border;
+      border-bottom: unset;
+      text-align: center;
+    }
+
+    .modal-content-custom {
+      max-width: 600px;
+      padding: 20px;
+    }
+
+    .mobile-cv {
+      background-color: white;
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      border: $border;
+      text-align: center;
+      cursor: pointer; 
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .links {
+    border-top: 0;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    border-right: unset;
+    a {
+      width: 100px;
+    }
+  }
+
+  .contact {
+    border: $border;
+    border-top: 0;
+    justify-content: flex-end;
+    @include column;
+    @include bg-color;
+    border-right: unset;
+    width: 100vw;
+    .headline {
+      background-color: #fbff00;
+      height: 100%;
+      border-right: unset;
+      p {
+        font-size: 72px;
+      }
+    }
+    form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &:hover {
+        background-color: #fbff00;
+      }
+    }
+    input {
+      font-size: 24px;
+      background-color: #d9d9d9;
+      border: none;
+      color: black;
+      font-family: "Montserrat", sans-serif;
+      &::placeholder {
+        color: gray;
+      }
+    }
+    .head {
+      @include column;
+      input {
+        border: $border;
+        border-left: unset;
+        border-right: unset;
+        width: unset;
+        border-radius: 0;
+        &:focus {
+          outline: none;
+        }
+        &:first-of-type {
+          border-bottom: unset;
+        }
+      }
+    }
+    .body {
+      min-height: 100px;
+      @include row;
+      justify-content: space-between;
+      textarea {
+        background-color: #d9d9d9;
+        border: $border;
+        border-top: 0;
+        border-left: 0;
+        border-bottom: 0;
+        width: 70%;
+        font-size: 24px;
+        font-family: "Montserrat", sans-serif;
+        resize: none;
+        border-radius: 0;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          font-size: 24px;
+          font-family: "Montserrat", sans-serif;
+        }
+      }
+      input {
+        width: 30%;
+        background-color: black;
+        color: white;
+        border-bottom: none;
+        border-radius: 0;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+        &:active {
+          background-color: #fbff00;
+          color: black;
+        }
+        &.email-sent {
+          background-color: green;
+          color: white;
+        }
+      }
+    }
   }
 }

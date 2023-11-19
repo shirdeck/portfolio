@@ -64,8 +64,7 @@ export default function AnimatedModal() {
                         <p>
                             Hello there!<br/>
 I'm Shir, a web developer looking to continue his professional journey and growth.<br/>
-During the last two years, I worked for ironSource where I used HTML/CSS/JS to build diverse and responsive web applications for a variety of clients and also used technologies such as React.js and Node.js through working on internally used efficiency tools and projects.<br/>
-With a strong design background, a friendly attitude, and an ambitious drive, I like problem-solving through research and collaborations and would love to set new goals and dive headfirst into a new role.<br/>
+Hello there! I'm Shir, an enthusiastic front-end developer with a strong foundation in web technologies and a keen interest in evolving into a technical product manager role. Passionate about user experience, design, and collaborative development.<br/>
 I Would love to talk and tell you more about myself,<br/>
 Shir Decker
                         </p>
